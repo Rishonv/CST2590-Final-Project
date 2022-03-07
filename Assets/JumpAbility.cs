@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class JumpAbility : MonoBehaviour
 {
-    public float jumpForce = 14f;
+    public float jumpForce = 15.5f;
 
     private bool isGrounded = true;
     private Rigidbody2D rb;
