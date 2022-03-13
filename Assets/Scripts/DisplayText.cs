@@ -17,6 +17,7 @@ public class DisplayText : MonoBehaviour
         if (other.tag == "Player")
         {
             uiObject.GetComponent<Text>().text = this.message;
+            uiObject.GetComponent<Text>().fontSize = 100;
             uiObject.SetActive(true);
         }
     }
