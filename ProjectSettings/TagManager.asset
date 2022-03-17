@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Reapable
+  - Traps
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Character
   - Water
   - UI
-  - 
+  - Traps
   - 
   - 
   - 
