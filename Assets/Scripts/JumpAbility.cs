@@ -24,7 +24,7 @@ public class JumpAbility : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.name == "Terrain")
+        if (other.gameObject.CompareTag("Terrain"))
         {
             Debug.Log("grounded");
             isGrounded = true;
@@ -33,7 +33,7 @@ public class JumpAbility : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.name == "Terrain")
+        if (other.gameObject.CompareTag("Terrain"))
         {
             Debug.Log("leaving floor");
             isGrounded = false;
