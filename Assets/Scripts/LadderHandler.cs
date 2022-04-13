@@ -1,58 +1,37 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LadderHandler : MonoBehaviour
 {
-    private float vertical;
-    private float speed = 8f;
-    private bool isLadder;
-    private bool isClimbing;
-    private Rigidbody2D rb;
+     private bool onWall;
+     private bool onRightWall;
+     private bool onLeftWall;
+     private float CollRad;
+     private Vector2 rightOffset;
+     private Vector2 leftOffset;
+     private Vector2 groundOffset;
+     private LayerMask groundLayer;
+     private int side;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+     void Update()
+     {
+         onWall = Physics2D.OverlapCircle((Vector2)transform.position +
+                 rightOffset, CollRad, groundLayer) ||
+                 Physics2D.OverlapCircle((Vector2)transform.position +
+                 leftOffset, CollRad, groundLayer);
+         onRightWall = Physics2D.OverlapCircle((Vector2)transform.position +
+                 rightOffset, CollRad, groundLayer);
+         onLeftWall = Physics2D.OverlapCircle((Vector2)transform.position +
+                 rightOffset, CollRad, groundLayer);
+         side = onRightWall ? 1 : -1;
+     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        vertical = Input.GetAxis("Vertical");
+     private void OnDrawGizmos()
+     {
+         Gizmos.color = Color.red;
+         Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, CollRad);
+         Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, CollRad);
+     } 
 
-        if (isLadder && Mathf.Abs(vertical) > 0f)
-        {
-            isClimbing = true;
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if (isClimbing)
-        {
-            rb.gravityScale = 0f;
-            rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
-        }
-        else
-        {
-            rb.gravityScale = 5.5f;
-        }
-    }
-
-    private void onTriggerEnter2D(Collider2D coll)
-    {
-        if (coll.CompareTag("Ladder"))
-        {
-            isLadder = true;
-        }
-    }
-
-    private void onTriggerExitr2D(Collider2D coll)
-    {
-        if (coll.CompareTag("Ladder"))
-        {
-            isLadder = false;
-            isClimbing = false;
-        }
-    }
-}
+}*/

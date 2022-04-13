@@ -7,6 +7,8 @@ TagManager:
   - Reapable
   - Traps
   - Terrain
+  - Climbable
+  - Collectible
   layers:
   - Default
   - TransparentFX
