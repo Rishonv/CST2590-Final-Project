@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1419663653167034458, guid: 34f96ce67e3629b449f3bfd960758988, type: 3}
+      propertyPath: tb
+      value: 
+      objectReference: {fileID: 926340173}
     - target: {fileID: 1419663654087450123, guid: 34f96ce67e3629b449f3bfd960758988, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -178,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4352358416072666101, guid: 34f96ce67e3629b449f3bfd960758988, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 347997910}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34f96ce67e3629b449f3bfd960758988, type: 3}
 --- !u!4 &31758715 stripped
@@ -263,7 +271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137544349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.575066, y: 0.2690705, z: -10}
+  m_LocalPosition: {x: -12.308395, y: 0.2690705, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1917938152}
@@ -718,7 +726,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489644328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09029293, y: 0.29632366, z: -10}
+  m_LocalPosition: {x: -1.5388575, y: 0.2925805, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15989,6 +15997,7 @@ GameObject:
   - component: {fileID: 789572010}
   - component: {fileID: 789572009}
   - component: {fileID: 789572011}
+  - component: {fileID: 789572012}
   m_Layer: 0
   m_Name: LevelEnd
   m_TagString: Finish
@@ -16101,6 +16110,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiObject: {fileID: 147031058}
   message: yayy level ended poggg
+--- !u!114 &789572012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789572007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291e8912b478b384c9031e67236a3376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevel: 1
 --- !u!1 &926340171
 GameObject:
   m_ObjectHideFlags: 0
