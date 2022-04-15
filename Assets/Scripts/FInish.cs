@@ -16,7 +16,8 @@ public class FInish : MonoBehaviour
 
     private void CompleteLevel()
     {
-        SceneManager.LoadScene(nextLevel);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // SceneManager.LoadScene(nextLevel);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
     }
 }
