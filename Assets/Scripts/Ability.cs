@@ -3,6 +3,7 @@ using System;
 
 public class Ability : MonoBehaviour
 {
+
     public UnityEngine.Object abilityScript;
 
     public void Reap()
