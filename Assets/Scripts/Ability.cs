@@ -27,3 +27,4 @@ public class Ability : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
+

@@ -19,12 +19,28 @@ public class JumpAbility : MonoBehaviour
     void Update()
     {
         float dirX = Input.GetAxisRaw("Horizontal");
+        if (IsGrounded())
+        {
+            Debug.Log("On the ground");
+        }
+        else
+        {
+            Debug.Log("Left the ground");
+        }
         if ((Input.GetButtonDown("Jump")) && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
 
+    private bool IsGrounded()
+    // checks overlap with ground layer using boxcast
+    {
+        return Physics2D.BoxCast(coll.bounds.center,
+                                 coll.bounds.size, 0f,
+                                 Vector2.down, .1f,
+                                 jumpableGround);
+    }
     // void OnCollisionEnter2D(Collision2D other)
     // {
     //     if (other.gameObject.CompareTag("Terrain"))
@@ -42,13 +58,4 @@ public class JumpAbility : MonoBehaviour
     //         isGrounded = false;
     //     }
     // }
-
-    private bool IsGrounded()
-    // checks overlap with ground layer using boxcast
-    {
-        return Physics2D.BoxCast(coll.bounds.center,
-                                 coll.bounds.size, 0f,
-                                 Vector2.down, .1f,
-                                 jumpableGround);
-    }
 }

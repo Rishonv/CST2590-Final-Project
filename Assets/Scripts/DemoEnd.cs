@@ -8,5 +8,9 @@ public class DemoEnd : MonoBehaviour
     public void GoToStart()
     {
         SceneManager.LoadScene(0, LoadSceneMode.Single);
+        // if (Input.GetKeyDown(KeyCode.J))
+        // {
+        //     
+        // }
     }
 }

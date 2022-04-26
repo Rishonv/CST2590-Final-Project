@@ -5,7 +5,7 @@ using System;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    private float moveInput;
+    [SerializeField] private float moveInput;
     private Rigidbody2D rb;
     private Ability closeAbility = null;
     public UnityEngine.Object abilityScript = null;
@@ -20,11 +20,11 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        if (moveInput < 0)
+        if (moveInput == -1)
         {
             transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
-        else
+        else if (moveInput == 1)
         {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Reapable"))
         {
